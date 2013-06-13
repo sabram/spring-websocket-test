@@ -1,4 +1,4 @@
-TEST
+TEST2
 ## Overview
 
 Samples demonstrating Spring WebSocket and SockJS support, currently in development for Spring Framework 4.0.
