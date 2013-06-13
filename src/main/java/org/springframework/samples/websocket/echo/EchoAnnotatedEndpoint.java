@@ -27,8 +27,10 @@ import javax.websocket.server.ServerEndpoint;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.server.endpoint.SpringConfigurator;
 
+@Component
 @ServerEndpoint(value = "/echoAnnotatedEndpoint", configurator = SpringConfigurator.class)
 public class EchoAnnotatedEndpoint {
 
@@ -38,7 +40,8 @@ public class EchoAnnotatedEndpoint {
 
 	@Autowired
 	public EchoAnnotatedEndpoint(EchoService echoService) {
-		this.echoService = echoService;
+        System.out.println("Getting instantiated for every new connection :-(");
+        this.echoService = echoService;
 	}
 
 	@OnOpen
