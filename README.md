@@ -1,3 +1,7 @@
+I added @Component annotation to EchoAnnotatedEndpoint,
+with the necessary web.xml and spring-servlet.xml type setup,
+but EchoAnnotatedEndpoint still instantiated for every new connection.
+
 ## Overview
 
 Samples demonstrating Spring WebSocket and SockJS support, currently in development for Spring Framework 4.0.
