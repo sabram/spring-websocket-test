@@ -1,6 +1,8 @@
-I added @Component annotation to EchoAnnotatedEndpoint,
-with the necessary web.xml and spring-servlet.xml type setup,
-but EchoAnnotatedEndpoint still instantiated for every new connection.
+Made changes necessary to have a single instance of EchoAnnotatedEndpoint available across all sessions, by adding:
+* @Component to EchoAnnotatedEndpoint
+* @ComponentScan(basePackages="org.springframework.samples.websocket") to EndpointConfig
+
+
 
 ## Overview
 
