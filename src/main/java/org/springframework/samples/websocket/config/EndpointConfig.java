@@ -17,12 +17,14 @@ package org.springframework.samples.websocket.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.samples.websocket.echo.EchoEndpoint;
 import org.springframework.web.socket.server.endpoint.ServerEndpointExporter;
 import org.springframework.web.socket.server.endpoint.ServerEndpointRegistration;
 
 @Configuration
+@ComponentScan(basePackages="org.springframework.samples.websocket")
 public class EndpointConfig {
 
 	@Autowired
